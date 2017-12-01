@@ -9,12 +9,12 @@
 import UIKit
 import MBProgressHUD
 
-class ListingsViewController: UIViewController, UITableViewDataSource {
+class TransactionsViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     var searchBar: UISearchBar!
     var searchSettings = SearchSettings()
-    var listings: [Listing]!
+    var transactions: [Transaction]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ class ListingsViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListingCell", for: indexPath) as! ListingCell
-        cell.listing = listings[indexPath.row]
+        cell.listing = transactions[indexPath.row]
         return cell
     }
     

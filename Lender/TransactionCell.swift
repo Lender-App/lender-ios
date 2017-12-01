@@ -1,5 +1,6 @@
+
 //
-//  ListingCell.swift
+//  TransactionCell.swift
 //  Lender
 //
 //  Created by Alex Chen on 4/3/17.
@@ -18,14 +19,14 @@ class ListingCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     
-    var listing: Listing! {
+    var transaction: Transaction! {
         didSet {
-            titleLabel.text = listing.title
-            usernameLabel.text = listing.user.name
-            priceLabel.text = "$\(listing.price)"
-            itemImageView.setImageWith(listing.imageURL)
-            dateLabel.text = listing.dateAvailableString
-            infoLabel.text = listing.info ?? " "
+            titleLabel.text = transaction.title
+            usernameLabel.text = transaction.user.name
+            priceLabel.text = "$\(transaction.price)"
+            itemImageView.setImageWith(transaction.imageURL)
+            dateLabel.text = transaction.dateAvailableString
+            infoLabel.text = transaction.info ?? " "
         }
     }
 
