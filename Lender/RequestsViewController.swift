@@ -9,31 +9,23 @@
 import UIKit
 import MBProgressHUD
 
-class RequestsViewController: UIViewController, UITableViewDataSource {
+class RequestsViewController: UIViewController, UITableViewDataSource, RequestProtocol {
     
     @IBOutlet weak var tableView: UITableView!
     var searchBar: UISearchBar!
-    var searchSettings = SearchSettings()
     var requests: [Request]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         hardCodeAddRequests()
         
-        // Initialize the UISearchBar
-        searchBar = UISearchBar()
-        searchBar.delegate = self
-        
+        // Initialize the UI
         tableView.dataSource = self
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        // Add SearchBar to the NavigationBar
-        searchBar.sizeToFit()
-        navigationItem.titleView = searchBar
-        
-        // Perform the first search when the view controller first loads
-        doSearch()
+       // NotificationCenter.default.addObserver(self, selector: #selector(newRequestReceived), name: NSNotification.Name(rawValue: "new request"), object: nil)
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,81 +41,64 @@ class RequestsViewController: UIViewController, UITableViewDataSource {
         return requests.count
     }
     
-    // Perform the search.
-    fileprivate func doSearch() {
-        
-        // MBProgressHUD.showAdded(to: self.view, animated: true)
-        
-        /* TODO: Check this stuff out
-         
-        // Perform request to GitHub API to get the list of repositories
-        GithubRepo.fetchRepos(searchSettings, successCallback: { (newRepos) -> Void in
-            
-            self.repos = newRepos
-            
-            // Print the returned repositories to the output window
-            for repo in newRepos {
-                print(repo)
-            }
-            
-            self.tableView.reloadData()
-            
-            MBProgressHUD.hide(for: self.view, animated: true)
-        }, error: { (error) -> Void in
-            print(error!)
-        })
-         */
+    func addNewRequest(newRequest: Request)  {
+        self.requests.insert(newRequest, at: 0)
+        self.tableView.reloadData()
     }
+
+//    func newRequestReceived(notification: Notification) {
+//        let data = UserDefaults.standard.object(forKey: "newRequestData") as! Data
+//        let dictionary = try! JSONSerialization.jsonObject(with: data, options: [])
+//        let newRequest = Request(dictionary: dictionary as! NSDictionary)
+//        self.requests.insert(newRequest, at: 0)
+//        self.tableView.reloadData()
+//    }
     
     func hardCodeAddRequests() {
         requests = []
         requests.append(Request(dictionary: [
             "title" : "Hawaiian Shirt, size M",
             "user" : User(dictionary: ["name" : "Frat-boy-party"]),
-            "price" : 600,
-            "date_needed" : Date(),
+            "price" : 6,
+            "dateNeeded" : Date(),
             "info" : "I'm going to a frat party, just gimme something that looks Hawaiian!"
         ]))
         
         requests.append(Request(dictionary: [
             "title" : "Blond wig",
             "user" : User(dictionary: ["name" : "FUTUREstar"]),
-            "price" : 300,
-            "date_needed" : Date(),
+            "price" : 3,
+            "dateNeeded" : Date(),
             "info" : "I need to play Hannah Montana for a video project!"
         ]))
         
         requests.append(Request(dictionary: [
             "title" : "Suede protector",
             "user" : User(dictionary: ["name" : "Love-myShoeS"]),
-            "price" : 200,
-            "date_needed" : Date(),
+            "price" : 2,
+            "dateNeeded" : Date(),
             "info" : "GOTTA PROTECT MY FAVORITE SUEDE SHOES! I'll use just a little bit I promise"
         ]))
     }
+    
+    // MARK: - Navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("preparing for segue: \(segue.identifier!)")
+        if (segue.identifier == "RDetailsSegue") {
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPath(for: cell)
+            let request = requests[indexPath!.row]
+            
+            let requestVC = segue.destination as! RequestViewController
+            requestVC.request = request
+        } else if (segue.identifier == "RCreateSegue") {
+            let newRequestVC = segue.destination as! NewRequestViewController
+            newRequestVC.delegate = self
+        }
+    }
 }
 
-// SearchBar methods
-extension RequestsViewController: UISearchBarDelegate {
-    
-    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        searchBar.setShowsCancelButton(true, animated: true)
-        return true
-    }
-    
-    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
-        searchBar.setShowsCancelButton(false, animated: true)
-        return true
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text = ""
-        searchBar.resignFirstResponder()
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchSettings.searchString = searchBar.text
-        searchBar.resignFirstResponder()
-        doSearch()
-    }
+protocol RequestProtocol {
+    func addNewRequest(newRequest: Request)
 }

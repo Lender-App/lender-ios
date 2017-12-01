@@ -8,38 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		93EC36D7DFA3B2FB90405AEF /* Pods_Lender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC90E49F881C341FCC99C0A8 /* Pods_Lender.framework */; };
+		FA30E4731FB4ED3A008759E8 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E4721FB4ED3A008759E8 /* Category.swift */; };
+		FA30E4751FB568D7008759E8 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E4741FB568D7008759E8 /* RequestViewController.swift */; };
+		FA30E4771FB768E5008759E8 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E4761FB768E5008759E8 /* TransactionViewController.swift */; };
+		FA748BB81FCDEC8100039613 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA748BB71FCDEC8100039613 /* Format.swift */; };
+		FA748BBA1FCE06E500039613 /* NewRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA748BB91FCE06E500039613 /* NewRequestViewController.swift */; };
 		FAC2C3C91E8EE7AF00B87F50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C3C81E8EE7AF00B87F50 /* AppDelegate.swift */; };
-		FAC2C3CB1E8EE7AF00B87F50 /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C3CA1E8EE7AF00B87F50 /* ListingsViewController.swift */; };
+		FAC2C3CB1E8EE7AF00B87F50 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C3CA1E8EE7AF00B87F50 /* TransactionsViewController.swift */; };
 		FAC2C3CE1E8EE7AF00B87F50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC2C3CC1E8EE7AF00B87F50 /* Main.storyboard */; };
 		FAC2C3D01E8EE7AF00B87F50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC2C3CF1E8EE7AF00B87F50 /* Assets.xcassets */; };
 		FAC2C3D31E8EE7AF00B87F50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC2C3D11E8EE7AF00B87F50 /* LaunchScreen.storyboard */; };
-		FAC2C3DE1E9309B300B87F50 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C3DD1E9309B300B87F50 /* Listing.swift */; };
+		FAC2C3DE1E9309B300B87F50 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C3DD1E9309B300B87F50 /* Transaction.swift */; };
 		FAC2C3E01E9309FE00B87F50 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C3DF1E9309FE00B87F50 /* User.swift */; };
 		FAC2C3E21E930C8F00B87F50 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C3E11E930C8F00B87F50 /* Request.swift */; };
 		FAC2C3E41E93107200B87F50 /* RequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C3E31E93107200B87F50 /* RequestsViewController.swift */; };
 		FAC2C3E61E93113300B87F50 /* RequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C3E51E93113300B87F50 /* RequestCell.swift */; };
-		FAC2C3E81E9311C300B87F50 /* SearchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C3E71E9311C300B87F50 /* SearchSettings.swift */; };
-		FAC2C3EA1E93179800B87F50 /* ListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C3E91E93179800B87F50 /* ListingCell.swift */; };
+		FAC2C3EA1E93179800B87F50 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C3E91E93179800B87F50 /* TransactionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5837F8AB4807F6027D94F515 /* Pods-Lender.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lender.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lender/Pods-Lender.debug.xcconfig"; sourceTree = "<group>"; };
 		BC90E49F881C341FCC99C0A8 /* Pods_Lender.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lender.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A9634FDA9FA110F2D702EF /* Pods-Lender.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lender.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lender/Pods-Lender.release.xcconfig"; sourceTree = "<group>"; };
+		FA30E4721FB4ED3A008759E8 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		FA30E4741FB568D7008759E8 /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		FA30E4761FB768E5008759E8 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		FA748BB71FCDEC8100039613 /* Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
+		FA748BB91FCE06E500039613 /* NewRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestViewController.swift; sourceTree = "<group>"; };
 		FAC2C3C51E8EE7AF00B87F50 /* Lender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC2C3C81E8EE7AF00B87F50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAC2C3CA1E8EE7AF00B87F50 /* ListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
+		FAC2C3CA1E8EE7AF00B87F50 /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		FAC2C3CD1E8EE7AF00B87F50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAC2C3CF1E8EE7AF00B87F50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAC2C3D21E8EE7AF00B87F50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAC2C3D41E8EE7AF00B87F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAC2C3DD1E9309B300B87F50 /* Listing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+		FAC2C3DD1E9309B300B87F50 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		FAC2C3DF1E9309FE00B87F50 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FAC2C3E11E930C8F00B87F50 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		FAC2C3E31E93107200B87F50 /* RequestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsViewController.swift; sourceTree = "<group>"; };
 		FAC2C3E51E93113300B87F50 /* RequestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestCell.swift; sourceTree = "<group>"; };
-		FAC2C3E71E9311C300B87F50 /* SearchSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSettings.swift; sourceTree = "<group>"; };
-		FAC2C3E91E93179800B87F50 /* ListingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingCell.swift; sourceTree = "<group>"; };
+		FAC2C3E91E93179800B87F50 /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +115,11 @@
 		FAC2C3DA1E93094E00B87F50 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FAC2C3CA1E8EE7AF00B87F50 /* ListingsViewController.swift */,
+				FAC2C3CA1E8EE7AF00B87F50 /* TransactionsViewController.swift */,
 				FAC2C3E31E93107200B87F50 /* RequestsViewController.swift */,
+				FA30E4741FB568D7008759E8 /* RequestViewController.swift */,
+				FA30E4761FB768E5008759E8 /* TransactionViewController.swift */,
+				FA748BB91FCE06E500039613 /* NewRequestViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -117,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC2C3E51E93113300B87F50 /* RequestCell.swift */,
-				FAC2C3E91E93179800B87F50 /* ListingCell.swift */,
+				FAC2C3E91E93179800B87F50 /* TransactionCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -125,10 +136,11 @@
 		FAC2C3DC1E93096200B87F50 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FAC2C3DD1E9309B300B87F50 /* Listing.swift */,
+				FAC2C3DD1E9309B300B87F50 /* Transaction.swift */,
 				FAC2C3DF1E9309FE00B87F50 /* User.swift */,
 				FAC2C3E11E930C8F00B87F50 /* Request.swift */,
-				FAC2C3E71E9311C300B87F50 /* SearchSettings.swift */,
+				FA30E4721FB4ED3A008759E8 /* Category.swift */,
+				FA748BB71FCDEC8100039613 /* Format.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -163,7 +175,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Alex Chen";
 				TargetAttributes = {
 					FAC2C3C41E8EE7AE00B87F50 = {
@@ -258,13 +270,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC2C3E01E9309FE00B87F50 /* User.swift in Sources */,
+				FA748BB81FCDEC8100039613 /* Format.swift in Sources */,
+				FA30E4731FB4ED3A008759E8 /* Category.swift in Sources */,
+				FA30E4751FB568D7008759E8 /* RequestViewController.swift in Sources */,
 				FAC2C3E61E93113300B87F50 /* RequestCell.swift in Sources */,
-				FAC2C3CB1E8EE7AF00B87F50 /* ListingsViewController.swift in Sources */,
-				FAC2C3EA1E93179800B87F50 /* ListingCell.swift in Sources */,
+				FAC2C3CB1E8EE7AF00B87F50 /* TransactionsViewController.swift in Sources */,
+				FAC2C3EA1E93179800B87F50 /* TransactionCell.swift in Sources */,
 				FAC2C3E41E93107200B87F50 /* RequestsViewController.swift in Sources */,
 				FAC2C3E21E930C8F00B87F50 /* Request.swift in Sources */,
-				FAC2C3DE1E9309B300B87F50 /* Listing.swift in Sources */,
-				FAC2C3E81E9311C300B87F50 /* SearchSettings.swift in Sources */,
+				FA748BBA1FCE06E500039613 /* NewRequestViewController.swift in Sources */,
+				FA30E4771FB768E5008759E8 /* TransactionViewController.swift in Sources */,
+				FAC2C3DE1E9309B300B87F50 /* Transaction.swift in Sources */,
 				FAC2C3C91E8EE7AF00B87F50 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,7 +316,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -308,7 +326,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -349,7 +371,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -357,7 +381,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -390,7 +418,7 @@
 				DEVELOPMENT_TEAM = 6J8XEY338X;
 				INFOPLIST_FILE = Lender/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = utingu.Lender;
+				PRODUCT_BUNDLE_IDENTIFIER = LenderApp.Lender;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -404,7 +432,7 @@
 				DEVELOPMENT_TEAM = 6J8XEY338X;
 				INFOPLIST_FILE = Lender/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = utingu.Lender;
+				PRODUCT_BUNDLE_IDENTIFIER = LenderApp.Lender;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

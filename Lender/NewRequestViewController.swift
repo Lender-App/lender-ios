@@ -1,5 +1,5 @@
 //
-//  RCreateViewController.swift
+//  NewRequestViewController.swift
 //  Lender
 //
 //  Created by Alex Chen on 11/28/17.
@@ -8,8 +8,15 @@
 
 import UIKit
 
-class CreateRequestViewController: UIViewController {
+class NewRequestViewController: UIViewController {
 
+    @IBOutlet weak var titleField: UITextField!
+    @IBOutlet weak var priceField: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var infoField: UITextView!
+    
+    var delegate: RequestProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,7 +27,32 @@ class CreateRequestViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func onCancelButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func onCreateButton(_ sender: Any) {
+        // SERVER: Post request
+        if titleField.text == "" {
+            print("Title cannot be empty!")
+        } else if priceField.text == "" {
+            print ("price cannot be empty!")
+        } else {
+            delegate?.addNewRequest(newRequest: Request(dictionary:
+                ["title" : titleField.text ?? "title",
+                "user" : User.currentUser!,
+                "price" : Int(priceField.text!) ?? 0,
+                "dateNeeded" : datePicker.date,
+                "info" : infoField.text
+                ]))
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+//        let data = try! JSONSerialization.data(withJSONObject: dictionary, options: [])
+//        UserDefaults.standard.set(data, forKey: "newRequestData")
+//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "new request"), object: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

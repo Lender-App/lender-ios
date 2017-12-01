@@ -1,3 +1,4 @@
+
 //
 //  TransactionViewController.swift
 //  Lender
@@ -9,11 +10,23 @@
 import UIKit
 
 class TransactionViewController: UIViewController {
-
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
+    
+    var transaction: Transaction!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        titleLabel.text = transaction.borrowRequest.title
+        usernameLabel.text = transaction.borrowRequest.user.name
+        priceLabel.text = "$\(transaction.borrowRequest.price)"
+        dateLabel.text = transaction.dateString
+        infoLabel.text = transaction.borrowRequest.info
     }
 
     override func didReceiveMemoryWarning() {

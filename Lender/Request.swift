@@ -1,4 +1,3 @@
-
 //
 //  Request.swift
 //  Lender
@@ -12,11 +11,12 @@ import UIKit
 class Request: NSObject {
     var title: String
     var user: User
+    var category: Category?
     var price: Int
     var dateNeeded: Date?
     var dateNeededString: String {
         get{
-            return Listing.formatDate(date: dateNeeded!)
+            return dateNeeded != nil ? Format.formatDate(date: dateNeeded!) : ""
         }
     }
     var info: String?
@@ -28,8 +28,7 @@ class Request: NSObject {
         title = dictionary["title"] as! String
         user = dictionary["user"] as! User
         price = dictionary["price"] as! Int
-        dateNeeded = dictionary["date_needed"] as? Date
+        dateNeeded = dictionary["dateNeeded"] as? Date
         info = dictionary["info"] as? String
     }
-
 }

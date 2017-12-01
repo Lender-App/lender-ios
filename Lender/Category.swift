@@ -9,5 +9,13 @@
 import UIKit
 
 class Category: NSObject {
-
+    var name: String
+    var SNSTopicId: String?
+    
+    var dictionary: NSDictionary
+    init(dictionary: NSDictionary) {
+        self.dictionary = dictionary
+        name = dictionary["name"] as! String
+        SNSTopicId = dictionary["SNSTopicId"] as? String
+    }
 }

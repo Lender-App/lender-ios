@@ -1,4 +1,3 @@
-
 //
 //  TransactionCell.swift
 //  Lender
@@ -8,25 +7,19 @@
 //
 
 import UIKit
-import AFNetworking
 
-class ListingCell: UITableViewCell {
-
+class TransactionCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var infoLabel: UILabel!
     
     var transaction: Transaction! {
-        didSet {
-            titleLabel.text = transaction.title
-            usernameLabel.text = transaction.user.name
-            priceLabel.text = "$\(transaction.price)"
-            itemImageView.setImageWith(transaction.imageURL)
-            dateLabel.text = transaction.dateAvailableString
-            infoLabel.text = transaction.info ?? " "
+        didSet{
+            titleLabel.text = transaction.borrowRequest.title
+            usernameLabel.text = transaction.borrowRequest.user.name
+            priceLabel.text = "$\(transaction.borrowRequest.price)"
+            dateLabel.text = transaction.borrowRequest.dateNeededString
         }
     }
 
@@ -40,5 +33,4 @@ class ListingCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

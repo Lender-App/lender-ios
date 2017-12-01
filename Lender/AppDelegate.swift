@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // SERVER: Login/Set current user
+        User.currentUser = User(dictionary: [
+            "name" : "Bob",
+            "email": "bob@gmail.com",
+            "phone" : "5551234567"
+            //"image_url" : NSURL(string: "https://yt3.ggpht.com/-uJh4oSQAwak/AAAAAAAAAAI/AAAAAAAAAAA/AMGKfKvDP3w/s900-c-k-no-mo-rj-c0xffffff/photo.jpg")!
+            ])
         return true
     }
 
